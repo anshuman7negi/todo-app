@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.topContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.headerContainer h1 {
+    color: #aeadad;
+    font-size: 6rem;
+}
+
+.headerContainer p {
+    color: #aeadad;
+    line-height: 1rem;
+    font-size: 22px;
+}
+
+.inputContainer {
+    display: flex;
+    gap: 1rem;
+    box-shadow: 0 4px 14px #46464661;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0.9rem;
+    width: 100%;
+}
+
+.inputContainer input {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    font-size: 22px;
+}
+
+
+.inputContainer button,
+.todoList li button {
+    padding: 0.6rem 1.4rem;
+}
+
+.todoContaniner {
+    display: flex;
+    flex-direction: column;
+    width: 51%;
+    padding: 3rem;
+}
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.todoList li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    background-color: #f0efef;
+    padding: 1rem;
+}
+
+.todoList li input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #f0efef;
+    font-size: 22px;
+}
+
+.trash,
+.edit {
+    width: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+.editClick {
+    background-color: #e4c559 !important;
+}
