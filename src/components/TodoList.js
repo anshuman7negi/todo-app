@@ -55,7 +55,7 @@ function TodoList({ todoArray, dispatch }) {
             onKeyDown={(e) => { handleClick(e, item.id); }}
             readOnly={!editId || editId !== item.id}
           />
-          <button type="button" className="listButton" onClick={() => { editData(item.id); }}>
+          <button type="button" className={`editSubmit ${editId === item.id ? 'hidden' : 'listButton'}`} onClick={() => { editData(item.id); }}>
             <img src={edit} alt="Edit Icon" style={{ width: '24px', height: '24px' }} />
           </button>
 
