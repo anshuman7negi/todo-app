@@ -90,9 +90,10 @@
   font-size: 22px;
 }
 
-.trash,
-.edit {
-  width: 24px;
+.listButton {
+  display: flex;
+  justify-content: center;
+  width: 0;
 }
 
 .hidden {

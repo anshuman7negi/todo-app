@@ -55,16 +55,16 @@ function TodoList({ todoArray, dispatch }) {
             onKeyDown={(e) => { handleClick(e, item.id); }}
             readOnly={!editId || editId !== item.id}
           />
-          <button type="button" className="edit" onClick={() => { editData(item.id); }}>
-            <img src={edit} alt="Edit Icon" />
+          <button type="button" className="listButton" onClick={() => { editData(item.id); }}>
+            <img src={edit} alt="Edit Icon" style={{ width: '24px', height: '24px' }} />
           </button>
 
-          <button type="button" className={`editSubmit ${editId === item.id ? '' : 'hidden'}`} onClick={() => { editSubmit(item.id); }}>
-            <img src={plus} alt="Edit Icon" />
+          <button type="button" className={`editSubmit ${editId === item.id ? 'listButton' : 'hidden'}`} onClick={() => { editSubmit(item.id); }}>
+            <img src={plus} alt="Edit Icon" style={{ width: '24px', height: '24px' }} />
           </button>
 
-          <button type="button" className="trash" onClick={() => { deleteData(item.id); }}>
-            <img src={trash} alt="Trash Icon" />
+          <button type="button" className="listButton" onClick={() => { deleteData(item.id); }}>
+            <img src={trash} alt="Trash Icon" style={{ width: '24px', height: '24px' }} />
           </button>
 
         </li>
@@ -76,7 +76,7 @@ function TodoList({ todoArray, dispatch }) {
 TodoList.propTypes = {
   todoArray: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       todoTask: PropTypes.string.isRequired,
       verified: PropTypes.bool.isRequired,
     }),
