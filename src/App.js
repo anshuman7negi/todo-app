@@ -3,7 +3,7 @@ import TodoApp from './components/TodoApp';
 
 function App() {
   return (
-    <div className='appContainer'>
+    <div className="appContainer">
       <TodoApp />
     </div>
   );

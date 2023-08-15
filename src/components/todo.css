@@ -1,120 +1,119 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 .topContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .headerContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .headerContainer h1 {
-    color: #aeadad;
-    font-size: 6rem;
+  color: #aeadad;
+  font-size: 6rem;
 }
 
 .headerContainer p {
-    color: #aeadad;
-    line-height: 1rem;
-    font-size: 22px;
-    text-align: center;
+  color: #aeadad;
+  line-height: 1rem;
+  font-size: 22px;
+  text-align: center;
 }
 
 .inputContainer {
-    display: flex;
-    gap: 1rem;
-    box-shadow: 0 4px 14px #46464661;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 0.9rem;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 4px 14px #46464661;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.9rem;
 }
 
 .inputContainer input {
-    width: 100%;
-    background-color: #fff;
-    border: none;
-    outline: none;
-    font-size: 22px;
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  font-size: 22px;
 }
-
 
 .inputContainer button,
 .todoList li button {
-    padding: 0.6rem 1.4rem;
+  padding: 0.6rem 1.4rem;
 }
 
 .todoContaniner {
-    display: flex;
-    flex-direction: column;
-    padding-top: 3rem;
-    width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  width: 70%;
 }
 
 .todoList {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    gap: 1rem;
-    width: 100%;
-    margin-top: 1rem;
-    max-height: 60vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .todoList li {
-    display: flex;
-    gap: 1rem;
-    background-color: #f0efef;
-    padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  background-color: #f0efef;
+  padding: 1rem;
 }
 
 .todoList li .inputCheck {
-    width: 10%;
+  width: 10%;
 }
 
 .todoList li input {
-    width: 100%;
-    border: none;
-    outline: none;
-    background-color: #f0efef;
-    font-size: 22px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #f0efef;
+  font-size: 22px;
 }
 
 .trash,
 .edit {
-    width: 24px;
+  width: 24px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .editClick {
-    background-color: #e4c559 !important;
+  background-color: #e4c559 !important;
 }
 
 .crossedText {
-    text-decoration: 2px solid red line-through;
+  text-decoration: 2px solid red line-through;
 }
 
-@media screen and (max-width:765px) {
-    .todoContaniner {
-        width: 90%;
-    }
+@media screen and (max-width: 765px) {
+  .todoContaniner {
+    width: 90%;
+  }
 
-    .inputContainer,
-    .todoList li  {
-        width: 90%;
-    }
+  .inputContainer,
+  .todoList li {
+    width: 90%;
+  }
 }
