@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    width: 100%;
 }
 
 .headerContainer {
@@ -27,6 +27,7 @@
     color: #aeadad;
     line-height: 1rem;
     font-size: 22px;
+    text-align: center;
 }
 
 .inputContainer {
@@ -36,7 +37,6 @@
     background-color: #fff;
     border-radius: 5px;
     padding: 0.9rem;
-    width: 100%;
 }
 
 .inputContainer input {
@@ -56,8 +56,8 @@
 .todoContaniner {
     display: flex;
     flex-direction: column;
-    width: 51%;
-    padding: 3rem;
+    padding-top: 3rem;
+    width: 70%;
 }
 
 .todoList {
@@ -67,15 +67,20 @@
     gap: 1rem;
     width: 100%;
     margin-top: 1rem;
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .todoList li {
     display: flex;
-    align-items: center;
-    width: 100%;
     gap: 1rem;
     background-color: #f0efef;
     padding: 1rem;
+}
+
+.todoList li .inputCheck {
+    width: 10%;
 }
 
 .todoList li input {
@@ -97,4 +102,19 @@
 
 .editClick {
     background-color: #e4c559 !important;
+}
+
+.crossedText {
+    text-decoration: 2px solid red line-through;
+}
+
+@media screen and (max-width:765px) {
+    .todoContaniner {
+        width: 90%;
+    }
+
+    .inputContainer,
+    .todoList li  {
+        width: 90%;
+    }
 }

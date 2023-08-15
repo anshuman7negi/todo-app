@@ -16,10 +16,16 @@ function InputTodo({dispatch}) {
         }
     }
 
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+          addData();
+        }
+      }
+
 
     return(
         <div className="inputContainer">
-            <input type="text" ref={inputRef} placeholder="Add todo..." />
+            <input type="text" ref={inputRef} placeholder="Add todo..." onKeyDown={handleKeyPress} />
             <img src={plus} alt=""  onClick={addData} />
         </div>
     )

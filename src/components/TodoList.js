@@ -5,15 +5,15 @@ import { useState } from 'react';
 
 
 
-function TodoList({ todoArray, dispatch}) {
+function TodoList({ todoArray, dispatch }) {
 
 
 
-    const [editTask, setEditTask] = useState(null);
+    const [editTask, setEditTask] = useState('');
     const [editId, setEditId] = useState(null);
 
     function deleteData(id) {
-        dispatch({type:'DELETE', payload:id})
+        dispatch({ type: 'DELETE', payload: id })
     }
 
     function editData(id) {
@@ -24,10 +24,20 @@ function TodoList({ todoArray, dispatch}) {
 
     function editSubmit(id) {
         if (editTask) {
-            dispatch({type:'UPDATE',payload:{editTask,id}})
+            dispatch({ type: 'UPDATE', payload: { editTask, id } })
         }
-        setEditTask(null);
+        setEditTask('');
         setEditId(null);
+    }
+
+    function handleVerify(id) {
+        dispatch({ type: 'VERIFY', payload: {id} });
+    }
+
+    function handleClick(e, id) {
+        if (e.key === 'Enter') {
+            editSubmit(id)
+        }
     }
 
 
@@ -36,11 +46,18 @@ function TodoList({ todoArray, dispatch}) {
 
             {todoArray.map((item) => (
                 <li className={` ${editId === item.id ? 'editClick' : ''}`} key={item.id}>
+                    <input className='inputCheck'
+                        type="checkbox"
+                        checked={item.verified}
+                        onChange={()=>{ handleVerify(item.id)}}
+                    />
                     <input
-                        className={`${editId === item.id ? 'editClick' : ''}`}
+                        className={`${editId === item.id ? 'editClick' : ''} ${item.verified && 'crossedText'} `}
                         type="text"
                         value={editId === item.id ? editTask : item.todoTask}
                         onChange={(e) => setEditTask(e.target.value)}
+                        onKeyDown={(e) => { handleClick(e, item.id) }}
+                        readOnly={!editId || editId !== item.id}
                     />
                     <img
                         className={`edit ${editId === item.id ? 'hidden' : ''}`}
